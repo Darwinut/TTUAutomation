@@ -18,15 +18,12 @@ Then(~/^login view should be visible$/) { ->
         throw new RocketTestException("Login page should be visible")
     }
 }
-And(~/^user enters "([^"]*)" into username field$/) { String arg1 ->
-    // Write code here that turns the phrase above into concrete actions
-    throw new PendingException()
+And(~/^user enters "([^"]*)" into username field$/) { String username  ->
+    ActionsImpl.getLoginActions().enterUsername(username)
 }
-When(~/^user enters "([^"]*)" into Password field$/) { String arg1 ->
-    // Write code here that turns the phrase above into concrete actions
-    throw new PendingException()
+When(~/^user enters "([^"]*)" into Password field$/) { String password ->
+    ActionsImpl.getLoginActions().enterPassword(password)
 }
 Then(~/^user clicks Login button$/) { ->
-    // Write code here that turns the phrase above into concrete actions
-    throw new PendingException()
+    ActionsImpl.getLoginActions().clickLogin()
 }
