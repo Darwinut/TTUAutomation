@@ -16,8 +16,17 @@ Feature: Hostname
     And user clicks on select button
     Then login view should be visible
 
-    @browser
-    Scenario: User opens valid host name on browser
-      Given user opens BROWSER application
-      When user opens "https://open.rocket.chat" url
-      Then login view should be visible
+  @browser
+  Scenario: User opens valid host name on browser
+    Given user opens BROWSER application
+    When user opens "https://open.rocket.chat" url
+    Then login view should be visible
+
+  @browser
+  Scenario: User logins with correct information on browser
+    Given user opens BROWSER application
+    When user opens "https://open.rocket.chat" url
+    Then login view should be visible
+    And user enters "darwinn" into username field
+    When user enters "darwinn" into Password field
+    Then user clicks Login button

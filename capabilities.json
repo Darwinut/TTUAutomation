@@ -28,7 +28,7 @@
         "appPackage": "chat.rocket.android",
         "appActivity": ".activity.MainActivity",
         "fullReset": "true",
-        "remote": ""
+        "remote": "http://0.0.0.0:4723/wd/hub"
       }
     ]
   }
