@@ -1,6 +1,7 @@
 package implementation
 
 import implementation.account.actions.IAccountActions
+import implementation.accountlanding.actions.IAccountlandingActions
 import implementation.core.actions.ICoreActions
 import implementation.hostname.actions.IHostnameActions
 import implementation.login.actions.ILoginActions
@@ -51,4 +52,12 @@ class ActionsImpl {
         return (IAccountActions) Actions.getCustomActions(currentDevice, IMPLEMENTATION_PACKAGE + "account.actions.AccountActions")
     }
 
+    /**
+     * Get account actions for current device
+     * @return
+     */
+    static IAccountlandingActions getAccountlandingActions() {
+        Device currentDevice = DeviceManager.getInstance().getActiveDevice()
+        return (IAccountlandingActions) Actions.getCustomActions(currentDevice, IMPLEMENTATION_PACKAGE + "accountlanding.actions.AccountlandingActions")
+    }
 }

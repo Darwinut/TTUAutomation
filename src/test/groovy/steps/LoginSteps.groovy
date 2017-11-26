@@ -27,3 +27,8 @@ When(~/^user enters "([^"]*)" into Password field$/) { String password ->
 Then(~/^user clicks Login button$/) { ->
     ActionsImpl.getLoginActions().clickLogin()
 }
+And(~/^login landing page should be visible$/) { ->
+    if (!ActionsImpl.getAccountlandingActions().isAccountlandingPageVisible()) {
+        throw new RocketTestException("Account landing page should be visible")
+    }
+}
