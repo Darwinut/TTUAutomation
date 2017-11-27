@@ -31,4 +31,9 @@ interface IRegistrationActions {
      */
     void clickRegister()
 
+    /**
+     * Click use this username button
+     */
+    void clickUseThisUsername()
+
 }

@@ -6,13 +6,15 @@ Feature: creating new account and login
     Then login view should be visible
 
   @browser
-  Scenario: User creates new account
+  Scenario: User creates new account with unique email and suggesting username
     When user clicks on register a new account
-    And user enters "darwinn" as name
-    And user enters "darwinn@gmail.com" as email
-    And user enters "darwinn" as password
-    And user enters "darwinn" as confirm password
+    And user enters "random" as name
+    And user enters unique emailID as email
+    And user enters "random" as password
+    And user enters "random" as confirm password
     And user clicks register a new account button
+    And use the suggesting username
+    And login landing page should be visible
 
 
   @browser

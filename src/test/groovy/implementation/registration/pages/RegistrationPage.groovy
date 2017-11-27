@@ -20,8 +20,11 @@ class RegistrationPage extends PageObjects {
     @FindBy(id = "confirm-pass")
     WebElement confirmpassword
 
-    @FindBy(css = "button.button.primary.login")
+    @FindBy(xpath = "//span[contains(text(), 'Register a new account')]")
     WebElement registerAccountButton
+
+    @FindBy(xpath = "//span[contains(text(), 'Use this username')]")
+    WebElement useThisUsernameButton
 
     RegistrationPage(Device device) {
         super(device)

@@ -38,4 +38,9 @@ class RegistrationActionsDesktopWeb implements IRegistrationActions, ActionsDesk
     void clickRegister() {
         click(registrationPage.getRegisterAccountButton())
     }
+
+    @Override
+    void clickUseThisUsername() {
+        click(registrationPage.getUseThisUsernameButton())
+    }
 }
