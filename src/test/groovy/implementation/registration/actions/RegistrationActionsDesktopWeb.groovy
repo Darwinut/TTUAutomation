@@ -31,12 +31,17 @@ class RegistrationActionsDesktopWeb implements IRegistrationActions, ActionsDesk
 
     @Override
     void enterConfirmPassword(String confirmpassword) {
-        sendKeys(registrationPage.getConfirmpassword(), confirmpassword)
+        sendKeys(registrationPage.getConfirmPassword(), confirmpassword)
     }
 
     @Override
     void clickRegister() {
         click(registrationPage.getRegisterAccountButton())
+    }
+
+    @Override
+    void enterUniqueUsername() {
+        click(registrationPage.getUsername())
     }
 
     @Override

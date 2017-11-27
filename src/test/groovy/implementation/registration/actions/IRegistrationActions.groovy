@@ -32,6 +32,11 @@ interface IRegistrationActions {
     void clickRegister()
 
     /**
+     * Enter unique username to field
+     */
+    void enterUniqueUsername()
+
+    /**
      * Click use this username button
      */
     void clickUseThisUsername()

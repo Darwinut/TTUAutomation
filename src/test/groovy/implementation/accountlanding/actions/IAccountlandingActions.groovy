@@ -8,4 +8,18 @@ interface IAccountlandingActions {
      */
     boolean isAccountlandingPageVisible()
 
+    /**
+     * Click sidebar header
+     */
+    void clickSidebarHeader()
+
+    /**
+     * Click logout
+     */
+    void clickLogout()
+
+    /**
+     * Click my account
+     */
+    void clickMyAccount()
 }

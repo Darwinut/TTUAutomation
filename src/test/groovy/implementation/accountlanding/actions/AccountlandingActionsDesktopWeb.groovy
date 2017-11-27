@@ -20,6 +20,21 @@ class AccountlandingActionsDesktopWeb implements IAccountlandingActions, Actions
      */
     @Override
     boolean isAccountlandingPageVisible() {
-        return isDisplayed(accountlandingPage.getAccountname())
+        return isDisplayed(accountlandingPage.getAccountName())
+    }
+
+    @Override
+    void clickSidebarHeader(){
+        click(accountlandingPage.getSidebarHeader())
+    }
+
+    @Override
+    void clickLogout(){
+        click(accountlandingPage.getLogout())
+    }
+
+    @Override
+    void clickMyAccount(){
+        click(accountlandingPage.getMyAccount())
     }
 }

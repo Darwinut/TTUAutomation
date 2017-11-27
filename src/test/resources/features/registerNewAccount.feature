@@ -16,7 +16,6 @@ Feature: creating new account and login
     And use the suggesting username
     And login landing page should be visible
 
-
   @browser
   Scenario: User logins with correct information on browser
     And user enters "darwinn" into username field

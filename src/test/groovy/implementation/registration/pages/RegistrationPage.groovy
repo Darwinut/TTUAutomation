@@ -18,10 +18,13 @@ class RegistrationPage extends PageObjects {
     WebElement pass
 
     @FindBy(id = "confirm-pass")
-    WebElement confirmpassword
+    WebElement confirmPassword
 
     @FindBy(xpath = "//span[contains(text(), 'Register a new account')]")
     WebElement registerAccountButton
+
+    @FindBy(id = "username")
+    WebElement username
 
     @FindBy(xpath = "//span[contains(text(), 'Use this username')]")
     WebElement useThisUsernameButton

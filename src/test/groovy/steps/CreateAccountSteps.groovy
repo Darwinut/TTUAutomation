@@ -28,6 +28,10 @@ And(~/^user enters "([^"]*)" as confirm password$/) { String confirmpassword ->
 And(~/^user clicks register a new account button$/) { ->
     ActionsImpl.getRegistrationActions().clickRegister()
 }
+And(~/^user enters unique name as username$/) { ->
+    String uniqueID = UUID.randomUUID().toString()
+    ActionsImpl.getRegistrationActions().enterUniqueUsername(uniqueID)
+}
 And(~/^use the suggesting username$/) { ->
     ActionsImpl.getRegistrationActions().clickUseThisUsername()
 }

@@ -12,5 +12,13 @@ Feature: actions after login
 
   @browser
   Scenario: Enable desktop notifications on browser
-    When user opens "https://open.rocket.chat/account/preferences" url
+    When user clicks on sidebar header
+    And user clicks on My Account button
     Then user clicks on enable desktop notification button
+
+  @browser
+  Scenario: Logout
+    When user clicks on sidebar header
+    And user clicks on Logout button
+    Then login view should be visible
+
