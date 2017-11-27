@@ -21,6 +21,8 @@ Then(~/^login view should be visible$/) { ->
 And(~/^user enters "([^"]*)" into username field$/) { String username  ->
     ActionsImpl.getLoginActions().enterUsername(username)
 }
+
+
 When(~/^user enters "([^"]*)" into Password field$/) { String password ->
     ActionsImpl.getLoginActions().enterPassword(password)
 }

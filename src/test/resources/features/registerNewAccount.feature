@@ -9,11 +9,11 @@ Feature: creating new account and login
   Scenario: User creates new account
     When user clicks on register a new account
     And user enters "darwinn" as name
-    And user enters unique email
+    And user enters "darwinn@gmail.com" as email
     And user enters "darwinn" as password
     And user enters "darwinn" as confirm password
     And user clicks register a new account button
-    Then new user account should be created
+
 
   @browser
   Scenario: User logins with correct information on browser

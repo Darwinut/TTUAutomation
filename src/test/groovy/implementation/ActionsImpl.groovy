@@ -5,6 +5,7 @@ import implementation.accountlanding.actions.IAccountlandingActions
 import implementation.core.actions.ICoreActions
 import implementation.hostname.actions.IHostnameActions
 import implementation.login.actions.ILoginActions
+import implementation.registration.actions.IRegistrationActions
 import io.cify.framework.Actions
 import io.cify.framework.core.Device
 import io.cify.framework.core.DeviceManager
@@ -59,5 +60,14 @@ class ActionsImpl {
     static IAccountlandingActions getAccountlandingActions() {
         Device currentDevice = DeviceManager.getInstance().getActiveDevice()
         return (IAccountlandingActions) Actions.getCustomActions(currentDevice, IMPLEMENTATION_PACKAGE + "accountlanding.actions.AccountlandingActions")
+    }
+
+    /**
+     * Get Registration page actions for current device
+     * @return
+     */
+    static IRegistrationActions getRegistrationActions() {
+        Device currentDevice = DeviceManager.getInstance().getActiveDevice()
+        return (IRegistrationActions) Actions.getCustomActions(currentDevice, IMPLEMENTATION_PACKAGE + "registration.actions.RegistrationActions")
     }
 }
