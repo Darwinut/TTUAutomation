@@ -33,8 +33,9 @@ interface IRegistrationActions {
 
     /**
      * Enter unique username to field
+     * * @param unique username
      */
-    void enterUniqueUsername()
+    void enterUniqueUsername(String UniqueUsername)
 
     /**
      * Click use this username button

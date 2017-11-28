@@ -10,12 +10,21 @@ Then(~/^user clicks on enable desktop notification button$/) { ->
     ActionsImpl.getAccountActions().enableDesktopNotifications()
 }
 When(~/^user clicks on sidebar header$/) { ->
-    ActionsImpl.getAccountlandingActions().clickSidebarHeader()
+    ActionsImpl.getHomeActions().clickSidebarHeader()
 }
 
 Then(~/^user clicks on Logout button$/) { ->
-    ActionsImpl.getAccountlandingActions().clickLogout()
+    ActionsImpl.getHomeActions().clickLogout()
 }
 And(~/^user clicks on My Account button$/) { ->
-    ActionsImpl.getAccountlandingActions().clickMyAccount()
+    ActionsImpl.getHomeActions().clickMyAccount()
+}
+When(~/^user clicks on general channel$/) { ->
+    ActionsImpl.getHomeActions().clickGeneralChannel()
+}
+And(~/^user enters welcome message "([^"]*)" in message box$/) { String message ->
+    ActionsImpl.getHomeActions().enterMessage(message)
+}
+Then(~/^user hits enter$/) { ->
+    ActionsImpl.getHomeActions().clickSend()
 }

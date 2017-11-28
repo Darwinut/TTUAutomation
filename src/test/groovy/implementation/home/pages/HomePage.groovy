@@ -1,11 +1,11 @@
-package implementation.accountlanding.pages
+package implementation.home.pages
 
 import io.cify.framework.PageObjects
 import io.cify.framework.core.Device
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.FindBy
 
-class AccountlandingPage extends PageObjects{
+class HomePage extends PageObjects{
 
     @FindBy(className = "sidebar__account-username")
     WebElement accountName
@@ -19,7 +19,16 @@ class AccountlandingPage extends PageObjects{
     @FindBy(xpath = "//span[contains(text(), 'My Account')]")
     WebElement myAccount
 
-    AccountlandingPage(Device device) {
+    @FindBy(xpath = "//div[contains(text(), 'general')]")
+    WebElement generalChannel
+
+    @FindBy(className = "rc-message-box__container")
+    WebElement messageBox
+
+    @FindBy(css = "svg.rc-icon.rc-input__icon-svg.rc-input__icon-svg--send")
+    WebElement sendButton
+
+    HomePage(Device device) {
         super(device)
     }
 }

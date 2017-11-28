@@ -18,11 +18,9 @@ Then(~/^login view should be visible$/) { ->
         throw new RocketTestException("Login page should be visible")
     }
 }
-And(~/^user enters "([^"]*)" into username field$/) { String username  ->
+And(~/^user enters "([^"]*)" into username field$/) {  String username ->
     ActionsImpl.getLoginActions().enterUsername(username)
 }
-
-
 When(~/^user enters "([^"]*)" into Password field$/) { String password ->
     ActionsImpl.getLoginActions().enterPassword(password)
 }
@@ -30,7 +28,7 @@ Then(~/^user clicks Login button$/) { ->
     ActionsImpl.getLoginActions().clickLogin()
 }
 And(~/^login landing page should be visible$/) { ->
-    if (!ActionsImpl.getAccountlandingActions().isAccountlandingPageVisible()) {
+    if (!ActionsImpl.getHomeActions().isHomePageVisible()) {
         throw new RocketTestException("Account landing page should be visible")
     }
 }

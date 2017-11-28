@@ -3,6 +3,8 @@ package implementation.registration.actions
 import implementation.registration.pages.RegistrationPage
 import io.cify.framework.actions.ActionsDesktopWeb
 import io.cify.framework.core.Device
+import org.codehaus.groovy.tools.shell.commands.ClearCommand
+import org.openqa.selenium.Keys
 
 class RegistrationActionsDesktopWeb implements IRegistrationActions, ActionsDesktopWeb {
 
@@ -40,8 +42,8 @@ class RegistrationActionsDesktopWeb implements IRegistrationActions, ActionsDesk
     }
 
     @Override
-    void enterUniqueUsername() {
-        click(registrationPage.getUsername())
+    void enterUniqueUsername(String UniqueUsername) {
+        sendKeys(registrationPage.getUsername(), UniqueUsername)
     }
 
     @Override
@@ -49,3 +51,4 @@ class RegistrationActionsDesktopWeb implements IRegistrationActions, ActionsDesk
         click(registrationPage.getUseThisUsernameButton())
     }
 }
+
