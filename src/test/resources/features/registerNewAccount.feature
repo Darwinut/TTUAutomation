@@ -13,13 +13,18 @@ Feature: creating new account and login
     And user enters "random" as password
     And user enters "random" as confirm password
     And user clicks register a new account button
-    #And user enters "random-8993" username as name
-    And use the suggesting username
+    And user enters unique username as name
+    And user clicks use this username
     And login landing page should be visible
 
   @browser
-  Scenario: User login with correct information on browser
-    And user enters "darwinn" into username field
-    When user enters "darwinn" into Password field
+  Scenario Outline: User login with correct information on browser
+    And user enters "<User Name>" into username field
+    When user enters "<Password>" into Password field
     Then user clicks Login button
     And login landing page should be visible
+
+    Examples:
+      | User Name | Password |
+      | darwinn   | darwinn  |
+      | randomm   | randomm  |

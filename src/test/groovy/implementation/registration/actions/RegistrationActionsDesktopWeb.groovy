@@ -43,6 +43,7 @@ class RegistrationActionsDesktopWeb implements IRegistrationActions, ActionsDesk
 
     @Override
     void enterUniqueUsername(String UniqueUsername) {
+        registrationPage.getUsername().clear()
         sendKeys(registrationPage.getUsername(), UniqueUsername)
     }
 
